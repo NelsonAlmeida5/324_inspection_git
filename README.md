@@ -64,13 +64,55 @@ git branch
 #---> La branche main est la branche principale
 ```
 
+### Commit et push de la partie 2:
+```sh
+# Commit
+git add README.md
+git commit -m "Réponses partie 2"
+
+# Push
+git push origin main
+```
+
 ### Partie 3 — Historique et commits
 
 4. Quel est le message du **premier commit** du projet ?  
-5. Trouvez le commit où une **clé API** a été ajoutée par erreur. Quel est son identifiant (hash court) ?  
+```sh
+git log --oneline --graph --decorate --all
+
+#---> "Initial commit: structure HTML/CSS/JS + README + docs"
+```
+
+5. Trouvez le commit où une **clé API** a été ajoutée par erreur. Quel est son identifiant (hash court) ? 
+```sh
+#--->  bea2d1a chore(config): AJOUT TEMPORAIRE d'une clé API (à retirer)
+```
+
 6. Quel commit a ensuite corrigé cette erreur ?  
+```sh
+#---> chore(config): retire la clé API et documente la bonne pratique
+```
+
 7. Trouvez le commit où le **titre de la page d'accueil** a été corrigé.  
+```sh
+#---> (origin/hotfix/typo) hotfix: corrige la typo 'Wolrd' dans le titre
+```
+
 8. Quel est le message du commit qui a **ajouté le fichier `CHANGELOG.md`** et quelle commande avez-vous utilisé ?
+```sh
+git log --grep="changelog" --oneline
+#---> docs: ajoute un changelog de base
+```
+
+### Commit et push de la partie 3:
+```sh
+# Commit
+git add README.md
+git commit -m "Réponses partie 3"
+
+# Push
+git push origin main
+```
 
 ### Partie 4 — Branches et fusions
 
