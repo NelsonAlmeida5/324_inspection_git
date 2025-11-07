@@ -117,7 +117,34 @@ git push origin main
 ### Partie 4 — Branches et fusions
 
 9. Quelles branches ont été fusionnées dans `main` ?  
+```sh
+git log --graph
+
+#merge(feature/login): intègre la page de connexion
+#merge(hotfix/typo): corrige la typo sur main
+
+#---> Les branches feature/login et hotfix/typo ont été fusionnées dans main.
+```
 10. Quelle branche **n'a pas été fusionnée** ? Pourquoi, selon vous ? 
+```sh
+$ git branch --merged main
+# main
+# Il y a que main qui apparait. On voit ici les branches non-fusionnées - il n'y a aucune non-fusionnée.
+
+# Autre manière de vérifier : 
+git branch --no-merged main
+# Il n'y a rien qui apparait. Car il n'y a aucune branche non mergée.
+```
+
+### Commit et push de la partie 4:
+```sh
+# Commit
+git add README.md
+git commit -m "Réponses partie 4"
+
+# Push
+git push origin main
+```
 
 ### Partie 5 — Analyse du contenu
 
